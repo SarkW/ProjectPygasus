@@ -13,7 +13,6 @@ class Package:
 
     def download(self):
         print("     Downloading " + self._title + " Please Wait....")
-        # Set up wget client
         for file in self._files:
             urllib.request.urlretrieve (file[0], file[1])
 
@@ -22,7 +21,7 @@ class Package:
 def draw_menu():
     # Setting up the design of the Console Interface
 
-    # Console.ForegroundColor = ConsoleColor.DarkCyan;
+    print("\033[1;36;10m ")
     print("    ________________________________________________                          ")
     print("    |                                               |                         ")
     print("    | Project Pygasus - The Xbox One homebrew client|                         ")
